@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    </head>
+    <body>
+        <div id='demo'>demo</div>
+		
+    </body>
+	<script>
+	   var demo =  document.getElementById('demo');
+     
 
+	   var animal = {
+         canRun: true,
+         canSwim: true,
+      };
+
+    var Wolf = function(){
+       this.name = 'Wolf';
+       this.canSwim = false;
+    };
+
+var Fish = function(){
+       this.name = 'Fish';
+       this.canRun = false;
+    };
+
+    Wolf.prototype = animal;
+     Fish.prototype = animal;
+
+    var wolf = new Wolf();
+     var fish = new Fish();
+
+    demo.innerHTML = fish.canSwim;
+    
+	</script>
+</html>
